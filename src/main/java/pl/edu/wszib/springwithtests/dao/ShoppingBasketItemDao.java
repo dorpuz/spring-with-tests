@@ -10,5 +10,7 @@ import java.util.List;
 public interface ShoppingBasketItemDao extends CrudRepository<ShoppingBasketItem, Integer> {
 
     List<ShoppingBasketItem> findAll();
+    ShoppingBasketItem findByProductIdAndShoppingBasketId(Integer productId, Integer shoppingBasketId);
+    List<ShoppingBasketItem> findAllByShoppingBasketId(Integer id);
 
 }
